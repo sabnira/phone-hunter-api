@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+       /* spinner style */
+       #spinner{
+          display: none;
+          width: 40px;
+          height: 40px;
+          border: 4px solid rgba(0,0, 0, 0.1);
+          border-top: 4px solid #000;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin: 20px auto;
+       }
+
+       /* spinner animation */
+       @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+       }
+    </style>
+</head>
+<body class="w-10/12 mx-auto">
+    <!-- navbar -->
+    <section>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar-start">
+              <a class="text-xl text-black font-semibold">Gadget</a>
+            </div>
+ 
+            <div class="navbar-end">
+              <a class="btn btn-accent">Sign Up</a>
+            </div>
+          </div>
+    </section>
+
+    <section class="flex items-center mx-auto justify-center my-5 gap-2">
+        <input type="text" placeholder="Search Your Phone" class="input input-accent" />
+
+        <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+    </section>
+
+    <!-- spinner -->
+    <div id="spinner"></div>
+
+    <!-- show all button -->
+    <div class="text-center">
+      <button class="btn btn-accent mt-5">Show All</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
