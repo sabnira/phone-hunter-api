@@ -15,7 +15,8 @@ const loadAllPhones = async(status, searchText) => {
 
 
 const displayAllPhone = (phones) => {
-    
+    document.getElementById("phones-container").innerHTML ='';
+
     const phonesContainer = document.getElementById("phones-container");
 
     phones.forEach(phone => {
@@ -25,7 +26,7 @@ const displayAllPhone = (phones) => {
         const div = document.createElement('div');
         div.innerHTML = `
         
-        <div class="card m-2 bg-base-100 w-96 shadow-sm">
+        <div class="card m-2 bg-base-100 w-80 shadow-sm">
         <figure class="px-10 pt-10">
             <img
             src=${image}
@@ -51,6 +52,7 @@ const displayAllPhone = (phones) => {
 
 
 const handleShowAll = () => {
+    document.getElementById("phones-container").innerHTML ='';
     loadAllPhones(true);
 }
 
