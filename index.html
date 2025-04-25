@@ -47,7 +47,7 @@
     </section>
 
     <section class="flex items-center mx-auto justify-center my-5 gap-2">
-        <input type="text" placeholder="Search Your Phone" class="input input-accent" />
+        <input id="search-box" type="text" placeholder="Search Your Phone" class="input input-accent" />
 
         <button onclick="handleSearch()" class="btn btn-accent">Search</button>
     </section>
@@ -55,10 +55,31 @@
     <!-- spinner -->
     <div id="spinner"></div>
 
+
+    <!-- all phone show in this container -->
+     <div id="phones-container" class="phones-container flex justify-around items-center flex-wrap"></div>
+
+
     <!-- show all button -->
     <div class="text-center">
-      <button class="btn btn-accent mt-5">Show All</button>
+      <button onclick="handleShowAll()" class="btn btn-accent mt-5">Show All</button>
     </div>
+
+
+    <!-- modal -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="./index.js"></script>
 </body>
